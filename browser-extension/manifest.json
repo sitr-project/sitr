@@ -1,17 +1,26 @@
 {
   "manifest_version": 3,
   "name": "ستر | SITR",
-  "version": "0.1.0",
-  "description": "احجب نطاقات مواقع تختارها بالكامل في Chrome أو Edge، مع حفظ الإعدادات محليًا.",
+  "version": "0.2.0",
+  "description": "غبّش الصور والفيديوهات في مواقع تختارها في Chrome أو Edge، مع حفظ إعداداتك محليًا.",
   "permissions": [
-    "declarativeNetRequest",
+    "scripting",
     "storage"
+  ],
+  "optional_host_permissions": [
+    "*://*/*"
   ],
   "background": {
     "service_worker": "service-worker.js"
   },
   "action": {
     "default_title": "إعدادات ستر",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "icon-48.png"
+  },
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
   }
 }

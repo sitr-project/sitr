@@ -10,21 +10,55 @@
   <body>
     <main>
       <header>
-        <img src="icon.svg" alt="">
-        <div><h1>سِتر <span>SITR</span></h1><p>حجب مواقع الويب بالكامل</p></div>
+        <img src="icon-48.png" alt="">
+        <div><h1>سِتر <span>SITR</span></h1><p>تغبيش الوسائط في المواقع المختارة</p></div>
       </header>
       <div class="status" id="status" role="status" aria-live="polite">جارٍ تحميل الإعدادات…</div>
 
+      <section class="welcome" id="welcome">
+        <strong>إعداد الحماية</strong>
+        <p>اختر المواقع والدرجة. يمكنك تعديلها أو إيقاف التغبيش لاحقًا من هذه النافذة.</p>
+      </section>
+
       <fieldset>
-        <legend>اختر المواقع</legend>
+        <legend>أي محتوى تريد تغبيشه؟</legend>
+        <div class="mode-options">
+          <label class="mode-card selected">
+            <input type="radio" name="blur-mode" value="all-media" checked>
+            <span class="sample sample-all" aria-label="مثال: تغبيش جميع الصور والفيديو"><i>▧</i><i>▶</i><i>▧</i></span>
+            <b>كل الصور والفيديو</b>
+            <small>متاح الآن</small>
+          </label>
+          <label class="mode-card disabled" title="كاشف الأشخاص غير متاح بعد">
+            <input type="radio" name="blur-mode" value="people-only" disabled>
+            <span class="sample sample-person" aria-label="مثال توضيحي لكشف الأشخاص فقط"><i>▧</i><i class="person-silhouette"><b></b></i><i>▧</i></span>
+            <b>الأشخاص فقط</b>
+            <small>غير متاح بعد</small>
+          </label>
+        </div>
+        <p class="mode-note">لا نصنّف الأشخاص أو نخمن جنسهم. خيار الأشخاص فقط يحتاج كاشفًا محليًا دقيقًا؛ لذلك لم نفعّله.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>درجة التغبيش <output id="blur-value" for="blur-strength">12</output>px</legend>
+        <input id="blur-strength" class="blur-slider" type="range" min="1" max="24" step="1" value="12">
+        <div class="range-labels"><span>خفيف</span><span>قوي</span></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>اختر المواقع التي تريد تغبيشها</legend>
         <label class="site-choice"><input type="checkbox" name="preset" value="tiktok.com"><span>TikTok</span></label>
         <label class="site-choice"><input type="checkbox" name="preset" value="youtube.com"><span>YouTube</span></label>
         <label class="site-choice"><input type="checkbox" name="preset" value="instagram.com"><span>Instagram</span></label>
         <label class="site-choice"><input type="checkbox" name="preset" value="x.com"><span>X</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="facebook.com"><span>Facebook</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="telegram.org"><span>Telegram Web</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="google.com"><span>Google Search</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="custom-browser"><span>مواقع ومتصفحات أخرى</span></label>
       </fieldset>
 
       <fieldset>
-        <legend>موقع آخر (اختياري)</legend>
+        <legend>أضف نطاقًا يدويًا</legend>
         <div class="add-domain">
           <input id="domain-input" type="text" inputmode="url" autocomplete="off" placeholder="example.com" aria-label="اسم النطاق">
           <button id="add-domain" type="button">إضافة</button>
@@ -33,9 +67,9 @@
         <small>اكتب اسم النطاق فقط، دون https:// أو مسار.</small>
       </fieldset>
 
-      <button id="save-button" class="button secondary" type="button">حفظ المواقع المختارة</button>
-      <button id="protection-button" class="button primary" type="button" disabled>تشغيل الحماية</button>
-      <p class="disclaimer">عند التشغيل يُحجب الموقع المختار بالكامل، وليس نوعًا محددًا من منشوراته. لا تعمل الإضافة داخل تطبيقات الهاتف.</p>
+      <button id="save-button" class="button secondary" type="button">حفظ الإعدادات</button>
+      <button id="protection-button" class="button primary" type="button" disabled>تشغيل التغبيش</button>
+      <p class="disclaimer">يُغَبّش الصور والفيديوهات داخل صفحات الويب المختارة فقط. لا يعمل داخل تطبيقات التواصل أو في متصفحات الهاتف.</p>
     </main>
   </body>
 </html>

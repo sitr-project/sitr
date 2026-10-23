@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#102a27">
     <meta name="description" content="ستر مشروع مجاني يهدف إلى مساعدتك على تصفح أكثر طمأنينة، مع خصوصية تبدأ من جهازك.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="سِتر">
     <title>ستر | مساحة أهدأ على الإنترنت</title>
-    <link rel="icon" href="assets/sitr-mark.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/sitr-icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/sitr-icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <script src="pwa.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="ستر، الصفحة الرئيسية">
-        <span class="brand-mark" aria-hidden="true"><img src="assets/sitr-mark.svg" alt=""></span>
+        <span class="brand-mark" aria-hidden="true"><img src="assets/sitr-icon-192.png" alt=""></span>
         <span class="brand-name">سِتر<span class="brand-latin">SITR</span></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="فتح القائمة">
@@ -24,7 +29,7 @@
         <a href="#how">كيف يعمل</a>
         <a href="#privacy">الخصوصية</a>
         <a href="#faq">الأسئلة الشائعة</a>
-        <a href="#settings">إعداداتي</a>
+        <a href="#download">التثبيت</a>
       </nav>
       <a class="header-cta" href="#download">اكتشف التطبيق <span aria-hidden="true">↗</span></a>
     </header>
@@ -39,18 +44,18 @@
             <a class="button button-primary" href="#download">تعرّف على التطبيق <span aria-hidden="true">←</span></a>
             <a class="text-link" href="#how">كيف يعمل ستر؟ <span aria-hidden="true">⌄</span></a>
           </div>
-          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>لا نرفع صورك أو فيديوهاتك إلى خوادمنا. التطبيق قيد التطوير.</span></div>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✳</span><span>التغبيش يعمل داخل مواقع الويب في Chrome وEdge على الكمبيوتر فقط.</span></div>
         </div>
         <div class="hero-art" aria-label="رسم توضيحي لواجهة إعدادات ستر">
           <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
           <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
           <div class="phone">
             <div class="phone-top"><span>٩:٤١</span><span>● ● ▰</span></div>
-            <div class="phone-brand"><img src="assets/sitr-mark.svg" alt=""><span>سِتر</span><span class="tiny-status">قريبًا</span></div>
+            <div class="phone-brand"><img src="assets/sitr-icon-192.png" alt=""><span>سِتر</span><span class="tiny-status">تجريبي</span></div>
             <p class="phone-greeting">مساحتك، <strong>بخياراتك.</strong></p>
             <div class="phone-card"><span class="card-symbol">◉</span><span><strong>اختياراتك</strong><small>حدّد ما يناسبك</small></span><span class="check">✓</span></div>
             <div class="phone-card"><span class="card-symbol">◈</span><span><strong>المنصات</strong><small>إعدادات قابلة للتخصيص</small></span><span class="check">✓</span></div>
-            <div class="phone-protection"><span class="protection-icon">✧</span><span><small>حالة التطبيق</small><strong>تجربة الموقع فقط</strong></span></div>
+            <div class="phone-protection"><span class="protection-icon">✧</span><span><small>تغبيش الوسائط</small><strong>داخل المتصفح فقط</strong></span></div>
             <div class="phone-nav"><span>⌂<small>الرئيسية</small></span><span>⚙<small>الإعدادات</small></span><span>◉<small>الخصوصية</small></span></div>
           </div>
           <div class="floating-pill"><span class="pill-check">✓</span> إعداداتك تبقى في جهازك</div>
@@ -66,13 +71,13 @@
         <div class="section-heading">
           <span class="eyebrow">مصمم حول احتياجك</span>
           <h2>تجربة أكثر وعيًا،<br><span>بخطوات بسيطة.</span></h2>
-          <p>ستر يضع لك أدوات الاختيار في مكان واحد. هذه نسخة الموقع الأولى؛ إعداداتها تحفظ تفضيلاتك محليًا، ولا تحجب محتوى التطبيقات.</p>
+          <p>تستطيع إضافة ستر إلى شاشة جهازك، كما تستطيع تثبيت إضافة المتصفح على الكمبيوتر لتغبيش الصور والفيديوهات في المواقع التي تختارها.</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
             <span class="feature-icon icon-sage">◉</span><span class="feature-number">01 / التخصيص</span>
             <h3>أنت تحدد ما يناسبك</h3><p>اختر فئات المحتوى ومستوى التصفية الذي تفضله. لا توجد إعدادات مفروضة عليك.</p>
-            <a href="#settings">جرّب إعدادات الموقع <span aria-hidden="true">←</span></a>
+            <a href="#download">نزّل إضافة المتصفح <span aria-hidden="true">←</span></a>
           </article>
           <article class="feature-card">
             <span class="feature-icon icon-sand">⌘</span><span class="feature-number">02 / الوضوح</span>
@@ -90,14 +95,14 @@
       <section class="capabilities section-wrap" id="capabilities">
         <div class="capability-copy">
           <span class="eyebrow">بكل صراحة</span>
-          <h2>الحماية الفعلية<br>تبدأ من <span>الشفافية.</span></h2>
-          <p>أضفنا إضافة تجريبية لمتصفحي Chrome وEdge على الكمبيوتر تحجب مواقع تختارها بالكامل. لا تحلل الصور أو الفيديو، ولا تعمل داخل تطبيقات الجوال. الموقع وحده لا يحجب شيئًا.</p>
+          <h2>التغبيش الفعلي<br>يبدأ من <span>الشفافية.</span></h2>
+          <p>إضافة ستر التجريبية تغبّش الصور والفيديو داخل صفحات المواقع التي تختارها على Chrome وEdge للكمبيوتر. الواجهة القابلة للتثبيت على الهاتف لا تتحكم بالتطبيقات الأخرى.</p>
           <a class="button button-light" href="#faq">افهم حدود التقنية <span aria-hidden="true">←</span></a>
         </div>
         <div class="capability-list">
-          <div class="capability-row"><span class="status-dot status-live"></span><div><strong>إضافة المتصفح</strong><small>تحجب النطاقات التي تختارها بالكامل — Chrome وEdge للكمبيوتر</small></div><span class="status-tag tag-live">تجريبية</span></div>
+          <div class="capability-row"><span class="status-dot status-live"></span><div><strong>إضافة المتصفح</strong><small>تغبّش صور وفيديو المواقع المختارة — Chrome وEdge للكمبيوتر</small></div><span class="status-tag tag-live">تجريبية</span></div>
           <div class="capability-row"><span class="status-dot status-build"></span><div><strong>تطبيق أندرويد</strong><small>الخطوة التالية — لم يُبنَ أو يُختبر بعد</small></div><span class="status-tag tag-build">قيد التطوير</span></div>
-          <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>تحليل المحتوى داخل المواقع</strong><small>لا تصنيف للصور أو الفيديو أو المنشورات</small></div><span class="status-tag tag-limited">غير متاح</span></div>
+          <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>الأشخاص فقط</strong><small>لا يوجد كاشف أشخاص موثوق في هذه النسخة</small></div><span class="status-tag tag-limited">غير متاح</span></div>
           <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>تطبيق iPhone</strong><small>تدعمه قيود iOS بطرق محدودة</small></div><span class="status-tag tag-limited">لاحقًا</span></div>
         </div>
       </section>
@@ -105,15 +110,15 @@
       <section class="browser-tool section-wrap" id="browser-tool">
         <div class="browser-tool-copy">
           <span class="eyebrow">ميزة تعمل على الكمبيوتر</span>
-          <h2>احجب الموقع<br><span>بالكامل من متصفحك.</span></h2>
-          <p>إضافة ستر لمتصفحي Chrome وEdge تحجب نطاقات مواقع تختارها، مثل TikTok أو YouTube. الإعدادات محلية، وتستطيع إيقاف الحماية من نافذة الإضافة.</p>
+          <h2>غبّش الصور<br><span>في مواقع تختارها.</span></h2>
+          <p>إضافة ستر لمتصفحي Chrome وEdge تضيف تغبيشًا محليًا لجميع الصور والفيديوهات في صفحات النطاقات التي تختارها. تبقى الصفحة مفتوحة، وتستطيع تغيير الشدة أو إيقاف التأثير.</p>
           <div class="browser-chips"><span>Chrome</span><span>Microsoft Edge</span><span>إعدادات محلية</span></div>
           <a class="button button-primary" href="https://github.com/sitr-project/sitr/blob/main/browser-extension/README.md">خطوات التثبيت <span aria-hidden="true">←</span></a>
         </div>
         <div class="browser-tool-note">
           <span class="note-shield" aria-hidden="true">⌑</span>
-          <strong>حجب النطاق كاملًا، لا المحتوى داخله</strong>
-          <p>عند اختيار YouTube مثلًا، لن تستطيع فتح youtube.com من ذلك المتصفح. لا تميّز الإضافة بين فيديو مناسب وغير مناسب، ولا تعمل داخل تطبيقات Android أو iPhone.</p>
+          <strong>تغبيش الوسائط، لا حجب الموقع</strong>
+          <p>عند اختيار YouTube مثلًا، يظل الموقع مفتوحًا لكن تُغبّش الصور والفيديوهات الظاهرة فيه. لا تميّز الإضافة بين محتوى مناسب وغير مناسب، ولا تعمل داخل تطبيقات Android أو iPhone.</p>
           <small>تجريبية: تحتاج تثبيتًا يدويًا من وضع المطوّر في المتصفح.</small>
         </div>
       </section>
@@ -129,93 +134,53 @@
           <h2>محتواك لك.<br><span>وهذا وعد نلتزم بحدوده.</span></h2>
           <p>الموقع لا يرسل تفضيلاتك. إضافة المتصفح تحفظ النطاقات وحالة الحماية محليًا في مساحة الإضافة، ولا ترفع محتوى التصفح إلى خادم.</p>
           <ul class="privacy-points">
-            <li><span>✓</span> الإضافة لا تقرأ الصور أو الفيديوهات</li>
+            <li><span>✓</span> الإضافة لا تحلل محتوى الصور أو الفيديوهات</li>
             <li><span>✓</span> تفضيلاتك محفوظة على جهازك فقط</li>
             <li><span>✓</span> الإضافة لا ترسل سجل التصفح إلى خادم</li>
           </ul>
-          <p class="privacy-caveat">الإضافة تحتاج صلاحية حجب طلبات المواقع التي تختارها. راجع الشفرة ومعلومات الصلاحيات قبل تثبيتها.</p>
+          <p class="privacy-caveat">الإضافة تحتاج صلاحية الوصول إلى صفحات المواقع التي تختارها لتطبيق التغبيش. راجع الشفرة ومعلومات الصلاحيات قبل تثبيتها.</p>
         </div>
-      </section>
-
-      <section class="settings-section" id="settings">
-        <div class="section-wrap settings-layout">
-          <div class="settings-intro">
-            <span class="eyebrow">مساحة تجريبية محلية</span>
-            <h2>ابدأ بتحديد<br><span>ما يهمك.</span></h2>
-            <p>هذه إعدادات تعريفية تحفظها الصفحة فقط؛ لا تتحكم بالإضافة. اضبط المواقع المراد حجبها من نافذة الإضافة نفسها.</p>
-            <div class="local-badge"><span>⌂</span> لا تغادر بياناتك هذا الجهاز</div>
-          </div>
-          <form class="preferences-card" id="preferences-form">
-            <div class="form-heading"><div><span class="step-label">إعداداتك</span><h3>ما الذي تريد تصفيته؟</h3></div><span class="saved-indicator" id="save-status" aria-live="polite">محفوظ محليًا</span></div>
-            <fieldset>
-              <legend>فئات المحتوى</legend>
-              <div class="choice-grid">
-                <label class="choice"><input type="checkbox" name="content" value="people"><span class="custom-check">✓</span><span>ظهور أشخاص</span></label>
-                <label class="choice"><input type="checkbox" name="content" value="suggestive"><span class="custom-check">✓</span><span>إيحاءات ومشاهد مكشوفة</span></label>
-                <label class="choice"><input type="checkbox" name="content" value="nudity"><span class="custom-check">✓</span><span>عري</span></label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>المنصات المستهدفة</legend>
-              <div class="platform-list">
-                <label><input type="checkbox" name="platform" value="TikTok"><span class="platform-name"><b class="platform-letter">♪</b> TikTok</span><span class="platform-unavailable">إعداد فقط</span></label>
-                <label><input type="checkbox" name="platform" value="YouTube"><span class="platform-name"><b class="platform-letter">▶</b> YouTube</span><span class="platform-unavailable">إعداد فقط</span></label>
-                <label><input type="checkbox" name="platform" value="Instagram"><span class="platform-name"><b class="platform-letter">◎</b> Instagram</span><span class="platform-unavailable">إعداد فقط</span></label>
-                <label><input type="checkbox" name="platform" value="X"><span class="platform-name"><b class="platform-letter">𝕏</b> X</span><span class="platform-unavailable">إعداد فقط</span></label>
-                <label><input type="checkbox" name="platform" value="web"><span class="platform-name"><b class="platform-letter">⌘</b> مواقع الإنترنت والمتصفحات</span><span class="platform-unavailable">إعداد فقط</span></label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>مستوى التصفية</legend>
-              <div class="level-options">
-                <label><input type="radio" name="level" value="light"><span><b>خفيف</b><small>تصفية أقل</small></span></label>
-                <label><input type="radio" name="level" value="medium"><span><b>متوسط</b><small>متوازن</small></span></label>
-                <label><input type="radio" name="level" value="strict"><span><b>صارم</b><small>تصفية أكثر</small></span></label>
-              </div>
-            </fieldset>
-            <button class="button button-primary save-button" type="submit">حفظ تفضيلاتي <span aria-hidden="true">←</span></button>
-            <p class="form-disclaimer">هذه تفضيلات توضيحية للموقع، ولا تتحكم في إضافة المتصفح المنفصلة.</p>
-          </form>
-        </div>
-      </section>
-
-      <section class="report-section section-wrap" id="report">
-        <div><span class="eyebrow">نطوّر بوعي</span><h2>هل واجهت حجبًا<br><span>غير دقيق؟</span></h2><p>سجّل ملاحظة على جهازك لمراجعتها لاحقًا. لن يتم إرسالها إلينا من هذه النسخة.</p></div>
-        <form id="report-form" class="report-card">
-          <label for="report-category">نوع الملاحظة</label>
-          <select id="report-category" required>
-            <option value="">اختر نوع الملاحظة</option><option value="false-positive">تم حجب محتوى مناسب</option><option value="missed">لم يتم حجب محتوى أريد تصفيته</option><option value="other">ملاحظة أخرى</option>
-          </select>
-          <label for="report-note">التفاصيل (اختياري)</label>
-          <textarea id="report-note" rows="3" maxlength="500" placeholder="لا تكتب معلومات شخصية أو روابط خاصة"></textarea>
-          <button class="button button-outline" type="submit">حفظ الملاحظة على جهازي</button>
-          <p class="report-status" id="report-status" aria-live="polite">لا تُرسل هذه الملاحظة إلى خادم.</p>
-        </form>
       </section>
 
       <section class="faq-section section-wrap" id="faq">
         <div class="faq-heading"><span class="eyebrow">إجابات واضحة</span><h2>أسئلة <span>شائعة.</span></h2><p>نفضل أن تكون التوقعات واقعية من البداية.</p></div>
         <div class="faq-list">
-          <details><summary>ما الذي تحجبه إضافة ستر الآن؟<span>＋</span></summary><p>تحجب النطاقات التي تختارها بالكامل داخل Chrome أو Edge على الكمبيوتر. مثلًا، اختيار YouTube يمنع فتح الموقع كله، وليس فقط الفيديوهات غير المناسبة. إعدادات الصفحة التعريفية لا تتحكم بالإضافة.</p></details>
-          <details><summary>هل تحلل الإضافة الصور أو الفيديو؟<span>＋</span></summary><p>لا. لا تقرأ الصور أو الفيديو أو المنشورات، ولا ترفع بيانات تصفحك. الإضافة تحجب الموقع المختار بالكامل فقط. لا تعمل على Chrome للجوال أو داخل تطبيقات التواصل على الهاتف.</p></details>
-          <details><summary>ما الذي يمكن لتطبيق أندرويد فعله مستقبلًا؟<span>＋</span></summary><p>قد يتيح أندرويد، بعد بناء التطبيق ومراجعته، بعض الخيارات مثل خدمات إمكانية الوصول أو VPN محلي للتصفية. لكل خيار قيود وصلاحيات وسياسات متجر. لم يُنفّذ أو يُختبر أي حجب بعد، ولن نعرضه كميزة متاحة قبل التحقق منه.</p></details>
-          <details><summary>هل ستُرفع صوري أو فيديوهاتي إلى الإنترنت؟<span>＋</span></summary><p>هذا الموقع لا يرفع أو يعالج أي صور أو فيديو. هدف التطبيق المستقبلي هو المعالجة على الجهاز حيثما أمكن؛ ستُذكر بوضوح أي استثناءات أو اتصالات قبل الإطلاق.</p></details>
-          <details><summary>هل ستر مجاني؟<span>＋</span></summary><p>الإضافة التجريبية مجانية للتنزيل والاستخدام. لا يوجد تطبيق Android قابل للتنزيل حتى الآن.</p></details>
+          <details><summary>ماذا تفعل إضافة ستر؟<span>＋</span></summary><p>تغبيش الصور والفيديوهات داخل نطاقات المواقع التي تختارها في Chrome أو Edge على الكمبيوتر. لا تحلل ما بداخل الوسائط ولا تعمل في تطبيقات التواصل على الهاتف.</p></details>
+          <details><summary>هل أستطيع اختيار تغبيش الأشخاص فقط؟<span>＋</span></summary><p>ليس بعد. كشف الأشخاص يحتاج نموذجًا محليًا موثوقًا، ولا نخمن جنس الأشخاص من الصور. المتاح الآن تغبيش جميع الصور والفيديوهات في الموقع المختار.</p></details>
+          <details><summary>هل تعمل الحماية في تطبيق TikTok أو Instagram على الجوال؟<span>＋</span></summary><p>لا. تثبيت الموقع على الشاشة الرئيسية يجعله يفتح كواجهة تطبيق، لكنه لا يستطيع تغيير التطبيقات الأخرى. التغبيش الفعلي في هذه النسخة يعمل داخل صفحات الويب على Chrome وEdge للكمبيوتر فقط.</p></details>
+          <details><summary>هل تُرفع صوري أو فيديوهاتي إلى الإنترنت؟<span>＋</span></summary><p>لا. الإضافة تضيف تأثير CSS محليًا على عناصر الصور والفيديو في صفحات المواقع المختارة، ولا ترسلها إلى خادم.</p></details>
+          <details><summary>هل ستر مجاني؟<span>＋</span></summary><p>واجهة ستر وإضافة المتصفح مجانية. الإضافة تجريبية ويجب تحميلها يدويًا. لا يوجد تطبيق Android أصلي في الوقت الحالي.</p></details>
           <details><summary>هل يمكن دعم iPhone؟<span>＋</span></summary><p>يمكن دراسة خيارات مثل Screen Time وFamily Controls، لكنها تتطلب استحقاقات وموافقات من Apple ولا تمنح تحكمًا حرًا بمحتوى التطبيقات الأخرى. دعم iPhone ليس متاحًا حاليًا.</p></details>
         </div>
       </section>
 
       <section class="download-section section-wrap" id="download">
-        <div class="download-orb" aria-hidden="true">سِتر</div>
-        <div class="download-copy"><span class="eyebrow">ابدأ الآن على الكمبيوتر</span><h2>ثبّت إضافة<br><span>ستر التجريبية.</span></h2><p>نزّل ملفات المشروع، ثم حمّل مجلد الإضافة يدويًا في Chrome أو Edge. هذه ليست تطبيق Android.</p></div>
-        <div class="download-action"><a class="button button-download" href="browser-extension/sitr-browser-extension.zip" download>تنزيل إضافة المتصفح <span aria-hidden="true">↧</span></a><small>Chrome وEdge للكمبيوتر — ملف ZIP</small></div>
+        <div class="download-orb"><img src="assets/sitr-icon-192.png" alt="شعار ستر"></div>
+        <div class="download-copy"><span class="eyebrow">تثبيت سِتر</span><h2>واجهتك أينما<br><span>تحتاجها.</span></h2><p>ثبّت واجهة ستر على جهازك من المتصفح. ولتغبيش الصور والفيديو داخل مواقع الويب، ثبّت الإضافة على Chrome أو Edge للكمبيوتر.</p></div>
+        <div class="download-action">
+          <button class="button button-download" id="install-pwa-button" type="button">تثبيت واجهة ستر <span aria-hidden="true">↧</span></button>
+          <a class="button button-download button-extension" href="browser-extension/sitr-browser-extension.zip" download>تنزيل إضافة الكمبيوتر <span aria-hidden="true">↧</span></a>
+          <small id="install-note">إضافة للشاشة الرئيسية أو كتطبيق ويب — ليست APK ولا تحجب تطبيقات الهاتف</small>
+        </div>
       </section>
+      <dialog class="install-dialog" id="install-dialog">
+        <form method="dialog"><button class="dialog-close" aria-label="إغلاق">×</button></form>
+        <span class="eyebrow">تثبيت ستر على جهازك</span>
+        <h2>اختر طريقة التثبيت</h2>
+        <ul>
+          <li><strong>Android:</strong> من Chrome افتح قائمة ⋮ ثم اختر «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».</li>
+          <li><strong>iPhone/iPad:</strong> افتح الموقع في Safari، اضغط «مشاركة» ثم «إضافة إلى الشاشة الرئيسية».</li>
+          <li><strong>الكمبيوتر:</strong> في Chrome أو Edge اضغط رمز التثبيت قرب شريط العنوان، أو اختر «تثبيت هذا الموقع كتطبيق» من قائمة المتصفح.</li>
+        </ul>
+        <p>هذا يثبت واجهة الموقع فقط. لتغبيش محتوى صفحات الويب على الكمبيوتر، نزّل إضافة ستر وثبّتها يدويًا. لا يعمل التغبيش داخل تطبيقات الهاتف.</p>
+        <form method="dialog"><button class="button button-primary">فهمت</button></form>
+      </dialog>
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="#home"><span class="brand-mark"><img src="assets/sitr-mark.svg" alt=""></span><span class="brand-name">سِتر<span class="brand-latin">SITR</span></span></a>
+      <a class="brand footer-brand" href="#home"><span class="brand-mark"><img src="assets/sitr-icon-192.png" alt=""></span><span class="brand-name">سِتر<span class="brand-latin">SITR</span></span></a>
       <p>مساحة رقمية أكثر طمأنينة. <span>مشروع مجاني قيد التطوير.</span></p>
-      <div class="footer-links"><a href="#privacy">الخصوصية</a><a href="#settings">إعداداتي</a><a href="#faq">الأسئلة الشائعة</a></div>
+      <div class="footer-links"><a href="#privacy">الخصوصية</a><a href="#download">التثبيت</a><a href="#faq">الأسئلة الشائعة</a></div>
       <small>© <span id="year"></span> سِتر — صُنع بعناية</small>
     </footer>
   </body>
