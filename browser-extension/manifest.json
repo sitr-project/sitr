@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "ستر | SITR",
+  "version": "0.1.0",
+  "description": "احجب نطاقات مواقع تختارها بالكامل في Chrome أو Edge، مع حفظ الإعدادات محليًا.",
+  "permissions": [
+    "declarativeNetRequest",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "إعدادات ستر",
+    "default_popup": "popup.html"
+  }
+}

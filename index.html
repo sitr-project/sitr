@@ -8,7 +8,6 @@
     <title>ستر | مساحة أهدأ على الإنترنت</title>
     <link rel="icon" href="assets/sitr-mark.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
-    <script src="download-config.js"></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -92,14 +91,30 @@
         <div class="capability-copy">
           <span class="eyebrow">بكل صراحة</span>
           <h2>الحماية الفعلية<br>تبدأ من <span>الشفافية.</span></h2>
-          <p>الموقع يعرض الفكرة ويحفظ تفضيلاتك على جهازك، لكنه لا يستطيع قراءة أو حجب محتوى داخل TikTok أو YouTube أو غيرها. الوصول إلى ذلك يتطلب تطبيق أندرويد وصلاحيات مناسبة، وما يزال قيد التطوير والاختبار.</p>
+          <p>أضفنا إضافة تجريبية لمتصفحي Chrome وEdge على الكمبيوتر تحجب مواقع تختارها بالكامل. لا تحلل الصور أو الفيديو، ولا تعمل داخل تطبيقات الجوال. الموقع وحده لا يحجب شيئًا.</p>
           <a class="button button-light" href="#faq">افهم حدود التقنية <span aria-hidden="true">←</span></a>
         </div>
         <div class="capability-list">
-          <div class="capability-row"><span class="status-dot status-live"></span><div><strong>الموقع والإعدادات</strong><small>تعمل الآن — تحفظ محليًا في المتصفح</small></div><span class="status-tag tag-live">متاح</span></div>
+          <div class="capability-row"><span class="status-dot status-live"></span><div><strong>إضافة المتصفح</strong><small>تحجب النطاقات التي تختارها بالكامل — Chrome وEdge للكمبيوتر</small></div><span class="status-tag tag-live">تجريبية</span></div>
           <div class="capability-row"><span class="status-dot status-build"></span><div><strong>تطبيق أندرويد</strong><small>الخطوة التالية — لم يُبنَ أو يُختبر بعد</small></div><span class="status-tag tag-build">قيد التطوير</span></div>
-          <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>الحجب داخل تطبيقات التواصل</strong><small>ليس متاحًا من هذا الموقع</small></div><span class="status-tag tag-limited">غير متاح</span></div>
+          <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>تحليل المحتوى داخل المواقع</strong><small>لا تصنيف للصور أو الفيديو أو المنشورات</small></div><span class="status-tag tag-limited">غير متاح</span></div>
           <div class="capability-row"><span class="status-dot status-limited"></span><div><strong>تطبيق iPhone</strong><small>تدعمه قيود iOS بطرق محدودة</small></div><span class="status-tag tag-limited">لاحقًا</span></div>
+        </div>
+      </section>
+
+      <section class="browser-tool section-wrap" id="browser-tool">
+        <div class="browser-tool-copy">
+          <span class="eyebrow">ميزة تعمل على الكمبيوتر</span>
+          <h2>احجب الموقع<br><span>بالكامل من متصفحك.</span></h2>
+          <p>إضافة ستر لمتصفحي Chrome وEdge تحجب نطاقات مواقع تختارها، مثل TikTok أو YouTube. الإعدادات محلية، وتستطيع إيقاف الحماية من نافذة الإضافة.</p>
+          <div class="browser-chips"><span>Chrome</span><span>Microsoft Edge</span><span>إعدادات محلية</span></div>
+          <a class="button button-primary" href="https://github.com/sitr-project/sitr/blob/main/browser-extension/README.md">خطوات التثبيت <span aria-hidden="true">←</span></a>
+        </div>
+        <div class="browser-tool-note">
+          <span class="note-shield" aria-hidden="true">⌑</span>
+          <strong>حجب النطاق كاملًا، لا المحتوى داخله</strong>
+          <p>عند اختيار YouTube مثلًا، لن تستطيع فتح youtube.com من ذلك المتصفح. لا تميّز الإضافة بين فيديو مناسب وغير مناسب، ولا تعمل داخل تطبيقات Android أو iPhone.</p>
+          <small>تجريبية: تحتاج تثبيتًا يدويًا من وضع المطوّر في المتصفح.</small>
         </div>
       </section>
 
@@ -112,13 +127,13 @@
         <div class="privacy-copy">
           <span class="eyebrow">خصوصية من البداية</span>
           <h2>محتواك لك.<br><span>وهذا وعد نلتزم بحدوده.</span></h2>
-          <p>نسخة الموقع لا تطلب حسابًا ولا ترسل تفضيلاتك. عند بناء التطبيق، سيكون الاتجاه هو تحليل المحتوى محليًا قدر الإمكان، مع شرح الصلاحيات بوضوح قبل طلبها.</p>
+          <p>الموقع لا يرسل تفضيلاتك. إضافة المتصفح تحفظ النطاقات وحالة الحماية محليًا في مساحة الإضافة، ولا ترفع محتوى التصفح إلى خادم.</p>
           <ul class="privacy-points">
-            <li><span>✓</span> لا رفع للصور أو الفيديوهات عبر هذا الموقع</li>
+            <li><span>✓</span> الإضافة لا تقرأ الصور أو الفيديوهات</li>
             <li><span>✓</span> تفضيلاتك محفوظة على جهازك فقط</li>
-            <li><span>✓</span> لا نطلب صلاحيات في نسخة الموقع</li>
+            <li><span>✓</span> الإضافة لا ترسل سجل التصفح إلى خادم</li>
           </ul>
-          <p class="privacy-caveat">ملاحظة: هذه المبادئ تصف نسخة الموقع الحالية. أي صلاحيات أو معالجة في التطبيق ستُشرح وتُراجع قبل النشر.</p>
+          <p class="privacy-caveat">الإضافة تحتاج صلاحية حجب طلبات المواقع التي تختارها. راجع الشفرة ومعلومات الصلاحيات قبل تثبيتها.</p>
         </div>
       </section>
 
@@ -127,7 +142,7 @@
           <div class="settings-intro">
             <span class="eyebrow">مساحة تجريبية محلية</span>
             <h2>ابدأ بتحديد<br><span>ما يهمك.</span></h2>
-            <p>اختياراتك تحفظ على هذا المتصفح فقط. هذه أداة إعداد للموقع وليست نظام حجب.</p>
+            <p>هذه إعدادات تعريفية تحفظها الصفحة فقط؛ لا تتحكم بالإضافة. اضبط المواقع المراد حجبها من نافذة الإضافة نفسها.</p>
             <div class="local-badge"><span>⌂</span> لا تغادر بياناتك هذا الجهاز</div>
           </div>
           <form class="preferences-card" id="preferences-form">
@@ -159,7 +174,7 @@
               </div>
             </fieldset>
             <button class="button button-primary save-button" type="submit">حفظ تفضيلاتي <span aria-hidden="true">←</span></button>
-            <p class="form-disclaimer">الحفظ لا يفعّل حجبًا. لا يوجد تطبيق مثبت أو خدمة حماية مرتبطة بهذه الإعدادات.</p>
+            <p class="form-disclaimer">هذه تفضيلات توضيحية للموقع، ولا تتحكم في إضافة المتصفح المنفصلة.</p>
           </form>
         </div>
       </section>
@@ -181,18 +196,19 @@
       <section class="faq-section section-wrap" id="faq">
         <div class="faq-heading"><span class="eyebrow">إجابات واضحة</span><h2>أسئلة <span>شائعة.</span></h2><p>نفضل أن تكون التوقعات واقعية من البداية.</p></div>
         <div class="faq-list">
-          <details><summary>هل يحجب هذا الموقع المحتوى داخل TikTok أو YouTube؟<span>＋</span></summary><p>لا. المتصفح لا يستطيع الاطلاع على محتوى التطبيقات الأخرى. إعدادات الموقع تحفظ اختياراتك محليًا فقط؛ لا يوجد حجب فعلي فيها.</p></details>
+          <details><summary>ما الذي تحجبه إضافة ستر الآن؟<span>＋</span></summary><p>تحجب النطاقات التي تختارها بالكامل داخل Chrome أو Edge على الكمبيوتر. مثلًا، اختيار YouTube يمنع فتح الموقع كله، وليس فقط الفيديوهات غير المناسبة. إعدادات الصفحة التعريفية لا تتحكم بالإضافة.</p></details>
+          <details><summary>هل تحلل الإضافة الصور أو الفيديو؟<span>＋</span></summary><p>لا. لا تقرأ الصور أو الفيديو أو المنشورات، ولا ترفع بيانات تصفحك. الإضافة تحجب الموقع المختار بالكامل فقط. لا تعمل على Chrome للجوال أو داخل تطبيقات التواصل على الهاتف.</p></details>
           <details><summary>ما الذي يمكن لتطبيق أندرويد فعله مستقبلًا؟<span>＋</span></summary><p>قد يتيح أندرويد، بعد بناء التطبيق ومراجعته، بعض الخيارات مثل خدمات إمكانية الوصول أو VPN محلي للتصفية. لكل خيار قيود وصلاحيات وسياسات متجر. لم يُنفّذ أو يُختبر أي حجب بعد، ولن نعرضه كميزة متاحة قبل التحقق منه.</p></details>
           <details><summary>هل ستُرفع صوري أو فيديوهاتي إلى الإنترنت؟<span>＋</span></summary><p>هذا الموقع لا يرفع أو يعالج أي صور أو فيديو. هدف التطبيق المستقبلي هو المعالجة على الجهاز حيثما أمكن؛ ستُذكر بوضوح أي استثناءات أو اتصالات قبل الإطلاق.</p></details>
-          <details><summary>هل التطبيق مجاني؟<span>＋</span></summary><p>هدف المشروع أن تبقى ميزات الحجب الأساسية مجانية دون اشتراك إجباري. التطبيق لم يُنشر بعد ولا يوجد رابط تنزيل حاليًا.</p></details>
+          <details><summary>هل ستر مجاني؟<span>＋</span></summary><p>الإضافة التجريبية مجانية للتنزيل والاستخدام. لا يوجد تطبيق Android قابل للتنزيل حتى الآن.</p></details>
           <details><summary>هل يمكن دعم iPhone؟<span>＋</span></summary><p>يمكن دراسة خيارات مثل Screen Time وFamily Controls، لكنها تتطلب استحقاقات وموافقات من Apple ولا تمنح تحكمًا حرًا بمحتوى التطبيقات الأخرى. دعم iPhone ليس متاحًا حاليًا.</p></details>
         </div>
       </section>
 
       <section class="download-section section-wrap" id="download">
         <div class="download-orb" aria-hidden="true">سِتر</div>
-        <div class="download-copy"><span class="eyebrow">خطوة بخطوة</span><h2>ستر يبدأ<br>من <span>اختيارك.</span></h2><p>نعمل على بناء التطبيق بعناية. سنضيف رابط التنزيل هنا بعد تجهيز نسخة موثوقة ونشرها.</p></div>
-        <div class="download-action"><a class="button button-download" id="download-link" href="#download" aria-disabled="true">التطبيق غير متاح بعد <span aria-hidden="true">↗</span></a><small id="download-note">لا يوجد ملف APK للتنزيل حاليًا</small></div>
+        <div class="download-copy"><span class="eyebrow">ابدأ الآن على الكمبيوتر</span><h2>ثبّت إضافة<br><span>ستر التجريبية.</span></h2><p>نزّل ملفات المشروع، ثم حمّل مجلد الإضافة يدويًا في Chrome أو Edge. هذه ليست تطبيق Android.</p></div>
+        <div class="download-action"><a class="button button-download" href="browser-extension/sitr-browser-extension.zip" download>تنزيل إضافة المتصفح <span aria-hidden="true">↧</span></a><small>Chrome وEdge للكمبيوتر — ملف ZIP</small></div>
       </section>
     </main>
 

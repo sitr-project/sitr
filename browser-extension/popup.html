@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>إعدادات ستر</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="icon.svg" alt="">
+        <div><h1>سِتر <span>SITR</span></h1><p>حجب مواقع الويب بالكامل</p></div>
+      </header>
+      <div class="status" id="status" role="status" aria-live="polite">جارٍ تحميل الإعدادات…</div>
+
+      <fieldset>
+        <legend>اختر المواقع</legend>
+        <label class="site-choice"><input type="checkbox" name="preset" value="tiktok.com"><span>TikTok</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="youtube.com"><span>YouTube</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="instagram.com"><span>Instagram</span></label>
+        <label class="site-choice"><input type="checkbox" name="preset" value="x.com"><span>X</span></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>موقع آخر (اختياري)</legend>
+        <div class="add-domain">
+          <input id="domain-input" type="text" inputmode="url" autocomplete="off" placeholder="example.com" aria-label="اسم النطاق">
+          <button id="add-domain" type="button">إضافة</button>
+        </div>
+        <div id="custom-domains" class="custom-domains"></div>
+        <small>اكتب اسم النطاق فقط، دون https:// أو مسار.</small>
+      </fieldset>
+
+      <button id="save-button" class="button secondary" type="button">حفظ المواقع المختارة</button>
+      <button id="protection-button" class="button primary" type="button" disabled>تشغيل الحماية</button>
+      <p class="disclaimer">عند التشغيل يُحجب الموقع المختار بالكامل، وليس نوعًا محددًا من منشوراته. لا تعمل الإضافة داخل تطبيقات الهاتف.</p>
+    </main>
+  </body>
+</html>

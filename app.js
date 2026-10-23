@@ -87,21 +87,4 @@
   }));
 
   document.querySelector("#year").textContent = new Date().getFullYear();
-  const downloadLink = document.querySelector("#download-link");
-  const downloadNote = document.querySelector("#download-note");
-  const downloadUrl = typeof window.SITR_DOWNLOAD_URL === "string" ? window.SITR_DOWNLOAD_URL.trim() : "";
-  if (downloadUrl) {
-    try {
-      const parsedUrl = new URL(downloadUrl, window.location.href);
-      if (parsedUrl.protocol === "https:") {
-        downloadLink.href = parsedUrl.href;
-        downloadLink.removeAttribute("aria-disabled");
-        downloadLink.textContent = "حمّل التطبيق مجانًا ";
-        downloadLink.insertAdjacentHTML("beforeend", '<span aria-hidden="true">↗</span>');
-        downloadNote.textContent = "رابط التنزيل الرسمي";
-      }
-    } catch (error) {
-      console.error("SITR_DOWNLOAD_URL is not a valid URL.", error);
-    }
-  }
 })();
